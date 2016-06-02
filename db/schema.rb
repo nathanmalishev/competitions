@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160602221124) do
+ActiveRecord::Schema.define(version: 20160602224207) do
 
   create_table "competitions", force: :cascade do |t|
     t.string   "title"
@@ -19,5 +19,15 @@ ActiveRecord::Schema.define(version: 20160602221124) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
+
+  create_table "users", force: :cascade do |t|
+    t.string   "user"
+    t.string   "email"
+    t.integer  "competition_id"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
+
+  add_index "users", ["competition_id"], name: "index_users_on_competition_id"
 
 end
