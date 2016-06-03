@@ -18,7 +18,6 @@ class UsersController < ApplicationController
     if @user.save
       redirect_to competition_path(@competition)
     else
-      puts @user.errors.to_json
       render 'competitions/show'
     end
   end

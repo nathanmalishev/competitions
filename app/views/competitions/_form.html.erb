@@ -24,6 +24,15 @@
   </p>
 
   <p>
+    <%= f.label :prize_description %><br>
+    <%= f.text_field :prize_description %>
+  </p>
+  <p>
+    <%= f.label :prize_value %><br>
+    <%= f.number_field :prize_value %>
+  </p>
+
+  <p>
     <%= f.submit "Create Item", :class => "btn btn-default"%>
   </p>
 <%end %>
