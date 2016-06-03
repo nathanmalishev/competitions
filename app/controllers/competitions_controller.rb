@@ -2,7 +2,7 @@ class CompetitionsController < ApplicationController
 
 
   #lack of ruby/rails knoweldge coudln't import the passwords/name
-  #from a config file :(
+  #from a config file :(, so they would be the same across controllers
   http_basic_authenticate_with name: 'admin', password: 'secret',
     except: [:index, :show]
 
