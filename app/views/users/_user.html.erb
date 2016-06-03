@@ -1,13 +1,18 @@
-  <p>
-    <strong>User:</strong>
-    <%= user.user %>
-  </p>
-  <p>
-    <strong>Email:</strong>
-    <%= user.body %>
-  </p>
-  <p>
-    <%= link_to 'Destroy user', [user.article, user],
+
+
+
+<table>
+  <tr>
+    <th>Username</th>
+    <th>Email</th>
+    <th></th>
+  </tr>
+  <tr>
+    <td><%= user.user %></td>
+    <td><%= user.email %></td>
+    <td><%= link_to 'Destroy user', [user.competition, user],
                 method: :delete,
-                data: { confirm: 'Are you sure?'} %>
-  </p>
+                data: { confirm: 'Are you sure?'} %></td>
+  </tr>
+
+</table>
