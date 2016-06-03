@@ -1,7 +1,6 @@
-<p>
-  <strong>Title:</strong>
-  <%= @competition.title %>
-</p>
+
+<div class="text-center">
+<h2> Competition: <%= @competition.title %></h2>
 
 <p>
   <strong>Description:</strong>
@@ -16,6 +15,8 @@
 <p>Enter this competition!</p>
 <%= render 'users/form' %>
 
-  <%= link_to 'Back', competitions_path %>
-  <%= link_to 'Edit', edit_competition_path(@competition) %>
+  <%= link_to 'Back', competitions_path %> |
+  <%= link_to 'Edit', edit_competition_path(@competition) %> |
   <%= link_to 'Users', competition_users_path(@competition) %>
+
+  </div>

@@ -3,7 +3,7 @@ class UsersController < ApplicationController
 
   #lack of ruby/rails knoweldge coudln't import the passwords/name
   #from a config file :(
-  http_basic_authenticate_with name: 'apple', password: 'secret',
+  http_basic_authenticate_with name: 'admin', password: 'secret',
     except: [:create]
 
   def index

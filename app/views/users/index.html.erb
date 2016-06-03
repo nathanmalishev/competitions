@@ -1,4 +1,7 @@
-<h2>Users who are signed up</h2>
-<%= render @users %>
+<h2>Competitors</h2>
+<br>
+<%= render 'users' %>
 
+<div class="btn btn-default">
 <%= link_to 'back', competition_path(params[:competition_id])%>
+</div>

@@ -3,8 +3,8 @@ class CompetitionsController < ApplicationController
 
   #lack of ruby/rails knoweldge coudln't import the passwords/name
   #from a config file :(
-  http_basic_authenticate_with name: 'apple', password: 'secret',
-    except: [:index, :show, :new, :create]
+  http_basic_authenticate_with name: 'admin', password: 'secret',
+    except: [:index, :show]
 
   def index
     @competitions = Competition.all
